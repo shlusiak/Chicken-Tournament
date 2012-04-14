@@ -1,0 +1,1099 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Standard) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONNECTION DIALOG DISCARDABLE  0, 0, 187, 111
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_MINIMIZEBOX | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Select Connection"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST,5,5,120,85,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&OK",IDOK,130,5,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,130,20,50,14
+    CONTROL         "Use &DirectPlay Protocol",IDC_DIRECTPLAYPROTOCOL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,95,91,10
+    ICON            IDR_ICON,IDC_STATIC,145,55,20,20
+END
+
+IDD_GAMELIST DIALOG DISCARDABLE  0, 0, 317, 206
+STYLE DS_MODALFRAME | DS_CENTER | WS_CAPTION | WS_SYSMENU
+CAPTION "Multiplayer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Create...",IDC_CREATE,5,185,55,14
+    LISTBOX         IDC_LIST,5,10,175,170,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_NAME,190,25,115,14,ES_AUTOHSCROLL
+    CONTROL         "F&armer",IDC_SPIELERTYP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,190,45,37,10
+    CONTROL         "C&hicken",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,190,55,
+                    42,10
+    DEFPUSHBUTTON   "&Join",IDC_JOIN,70,185,55,14
+    CONTROL         "&Refresh",IDC_REFRESH,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,130,185,50,14
+    CONTROL         "&Fullscreen",IDC_FULLSCREEN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,190,90,48,10
+    CONTROL         "&32 Bit Textures",IDC_32BPPTEXTURES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,240,90,63,10
+    COMBOBOX        IDC_RESOLUTION,190,110,115,82,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_DEVICE,190,140,115,95,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Show &Intro",IDC_INTRO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,190,160,50,10
+    PUSHBUTTON      "E&xit",IDCANCEL,245,185,65,14
+    LTEXT           "Name:",IDC_STATIC,190,15,22,8
+    GROUPBOX        "Player",IDC_STATIC,185,5,125,65
+    GROUPBOX        "Graphics:",IDC_STATIC,185,75,125,105
+    LTEXT           "Resolution",IDC_STATIC,190,100,34,8
+    LTEXT           "Device",IDC_STATIC,190,130,24,8
+    CONTROL         "&Sound",IDC_SOUND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    260,155,37,10
+    CONTROL         "&Music",IDC_MUSIK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    260,165,35,10
+END
+
+IDD_GAMESETTINGS DIALOG DISCARDABLE  0, 0, 137, 191
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Game Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_GAME,5,15,70,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CHICKEN,5,45,55,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,65,45,11,
+                    14
+    EDITTEXT        IDC_FARMER,5,75,55,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin4",IDC_SPIN4,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,65,75,11,
+                    14
+    EDITTEXT        IDC_TREES,5,105,55,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,65,105,11,
+                    14
+    EDITTEXT        IDC_STALL,5,135,55,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin3",IDC_SPIN3,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,71,129,11,
+                    14
+    EDITTEXT        IDC_X,5,170,25,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_Z,40,170,25,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "&OK",IDOK,80,5,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,80,22,50,14
+    LTEXT           "Game Name:",IDC_STATIC,5,5,42,8
+    LTEXT           "Computer Chickens:",IDC_STATIC,5,35,64,8
+    LTEXT           "Trees:",IDC_STATIC,5,95,21,8
+    LTEXT           "World Dimensions:",IDC_STATIC,5,159,60,8
+    LTEXT           "X",IDC_STATIC,31,172,8,8
+    LTEXT           "meters",IDC_STATIC,67,172,22,8
+    LTEXT           "Henhouses:",IDC_STATIC,5,124,39,8
+    LTEXT           "Computer Farmer:",IDC_STATIC,5,65,56,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CONNECTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_GAMELIST, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 202
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_E_CRITICAL          "Chicken Tournament was terminated due to a critical error.\nErrorcode: 0x%.8x, Address: 0x%.8x."
+    IDS_E_TITLE             "Chicken Tournament - Error!"
+    IDS_E_INIT              "Failed to initialize game. (#1)"
+    IDS_E_MODELS            "Cannot load models. (#2)"
+    IDS_E_INTRO             "Cannot display intro sequence. (#3)"
+    IDS_E_MUSIC             "Cannot initialize music! (#4)"
+    IDS_E_INITWINDOW        "Failed to create window. (#5)"
+    IDS_E_DDRAW             "DirectDraw initialization failed. (#6)"
+    IDS_E_SETCOOPERATIVELEVEL "SetCooperativeLevel failed. (#7)"
+    IDS_E_DISPLAYMODE       "SetDisplayMode failed. (#8)"
+    IDS_E_PRIMARYSURFACE    "Cannot create primary surface. (#9)"
+    IDS_E_CLIPPER           "Clipping initialization failed. (#10)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_E_GETBACKBUFFER     "Couldn't query background buffer. (#11)"
+    IDS_E_CREATEBACKBUFFER  "Couldn't create background buffer. (#12)"
+    IDS_E_NOZBUFFER         "No suitable Z-buffer found. (#13)"
+    IDS_E_CREATEZBUFFER     "Couldn't create Z-buffer. (#14)"
+    IDS_E_NOUPDATEAFTERZBUFFER 
+                            "Couldn't update 3D device with new Z-buffer. (#15)"
+    IDS_E_D3D               "Direct3D initialization failed. (#16)"
+    IDS_E_NOD3D7            "Direct 3D v7 interface query failed. (#17)"
+    IDS_E_CREATEDEVICE      "Cannot create 3D device! (#18)"
+    IDS_E_VIEWPORT          "Couldn't set view port for 3D device. (#19)"
+    IDS_E_DIRECTSOUND       "DirectSound initialization failed. (#20)"
+    IDS_E_DSSETCOOPERATIVELEVEL 
+                            "DirectSound: SetCooperativeLevel failed. (#21)"
+    IDS_E_PRIMARYBUFFER     "An error occurred while creating the primary sound buffer. (#22)"
+    IDS_E_DIRECTINPUT       "DirectInput initialization failed. (#23)"
+    IDS_E_LOADSOUNDS        "Cannot load sounds. (#24)"
+    IDS_E_LOADTEXTURES      "Cannot load textures. (#25)"
+    IDS_E_LOADSPRITES       "Cannot load sprites. (#26)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_E_RESTORETEXTURES   "Failed to restore textures correctly. (#27)"
+    IDS_T_CLASSNAME         "MyMainWindow"
+    IDS_T_TITLESERVER       "Chicken Tournament - Server"
+    IDS_T_TITLECLIENT       "Chicken Tournament - Client"
+    IDS_T_WIREFRAME1        "Wireframe point mode"
+    IDS_T_WIREFRAME2        "Wireframe deactivated"
+    IDS_T_WIREFRAME3        "Wireframe active"
+    IDS_T_LOADING           "Loading..."
+    IDS_T_LOADED0           "3D Engine"
+    IDS_T_LOADED1           "Sound"
+    IDS_T_LOADED2           "Controls"
+    IDS_T_LOADED3           "Timer"
+    IDS_T_LOADED4           "Textures"
+    IDS_T_LOADED5           "Models"
+    IDS_T_LOADED6           "Objects"
+    IDS_T_LOADED7           "Music"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_T_LOADED8           "Synchronizing..."
+    IDS_T_SOUNDON           "Sound on"
+    IDS_T_SOUNDOFF          "Sound off"
+    IDS_T_MUSICOFF          "Music off"
+    IDS_T_MUSICON           "Music on"
+    IDS_T_SCREENSHOTSAVED   "Screenshot saved to desktop."
+    IDS_T_MOUSEREVERSED     "Vertical mouse orientation: inverted."
+    IDS_T_MOUSENORMAL       "Vertical mouse orientation: normal."
+    IDS_T_TOT               "You're dead!"
+    IDS_T_GOLFEND           "%.1f m"
+    IDS_T_CHICKENHASHIT     "You fragged %s!"
+    IDS_T_FARMERWASHIT      "%s got you!"
+    IDS_T_HATS0             "No hat"
+    IDS_T_HATS1             "Top hat"
+    IDS_T_HATS2             "Cowboy hat"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_T_HATS3             "Crown"
+    IDS_T_HATS4             "Santa hat"
+    IDS_T_HATS5             "Frying pan"
+    IDS_T_HATS6             "Chef hat"
+    IDS_T_HAT               "%s equipped!"
+    IDS_T_GOTGARTENKRALLE   "GardenClaw Gold 500"
+    IDS_T_GOTGOLFER         "Golf Club"
+    IDS_T_GOTDRESCHER       "The Harvester"
+    IDS_T_GOTPLASMA         "Plasma Gun"
+    IDS_T_GAMENAME          "%s's Game"
+    IDS_T_INVALIDSIZE       "Width and height must be between 10 and 1000 m!"
+    IDS_T_INVALIDSIZETITLE  "You psycho!"
+    IDS_T_ERRORENUMSESSIONS "An error has occurred (#%d)."
+    IDS_T_NOSESSIONS        "Nothing found."
+    IDS_T_REFRESH           "Please click refresh!"
+    IDS_E_CREATEGAME        "Can't create game!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_E_CREATEPLAYER      "Cannot create player entity!"
+    IDS_E_JOINGAME          "Can't join game!"
+    IDS_T_JOINED            "%s has joined the game."
+    IDS_T_LEFT              "%s has left the game."
+    IDS_T_NEWSERVER         "You're the new game server."
+    IDS_T_NAMECHANGED       "%s is now known as %s."
+    IDS_T_SERVERCHANGEDWORLD "World settings changed by server."
+    IDS_T_LOSGEHTS          "Go! Go! Go!"
+    IDS_T_SERVERCAT         " (Server)"
+    IDS_T_PLAYERTYPES0      "Farmer"
+    IDS_T_PLAYERTYPES1      "Chicken"
+    IDS_T_PLAYER            "Player"
+    IDS_T_NAME              "Name"
+    IDS_T_ID                "ID"
+    IDS_T_KILLS             "Kills"
+    IDS_T_PING              "Ping"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_T_TYPE              "Type"
+    IDS_M_MAINMENU          "Main Menu"
+    IDS_M_CONTINUE          "Resume"
+    IDS_M_OPTIONS           "Options"
+    IDS_M_SERVEROPTIONS     "Server Options"
+    IDS_M_INFO              "About"
+    IDS_M_EXIT              "Quit"
+    IDS_M_BACK              "Back"
+    IDS_M_FOG               "Fog"
+    IDS_M_SPECULAR          "Specular Highlights"
+    IDS_M_VSYNC             "Vertical Sync"
+    IDS_M_BLOOD             "Blood"
+    IDS_M_FEDERN            "Feathers"
+    IDS_M_GIBS              "Gibs"
+    IDS_M_BLOODAMOUNT       "Blood Factor:"
+    IDS_M_SOUND             "Sound"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_M_UNREALSOUND       "Unreal Announcer"
+    IDS_M_GACKERN           "Chicken Squawks"
+    IDS_M_MUSIC             "Music"
+    IDS_M_REVERSEMOUSE      "Invert mouse"
+    IDS_M_SMOOTHMOUSE       "Smooth mouse movement"
+    IDS_M_MOUSESENSITIVITY  "Mouse Sensitivity:"
+    IDS_M_GOLFERGEBNISSE    "Show golf scores"
+    IDS_M_GRAFIK            "Display"
+    IDS_M_SONSTIGES         "Miscellaneous"
+    IDS_M_ALPHABLENDING     "Alphablending"
+    IDS_M_HAUPTIDEE         "Idea:"
+    IDS_M_VORSCHLAEGE       "Constructive proposals:"
+    IDS_M_PROGRAMMIERER     "Programming:"
+    IDS_M_GRAFIKER          "Graphics:"
+    IDS_M_TEXTUREN          "Textures:"
+    IDS_M_SPRITES           "2D art:"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_M_MODELLE           "Models:"
+    IDS_M_SOUNDS            "Sounds:"
+    IDS_M_MUSIK             "Music:"
+    IDS_M_NETWORK           "Multiplayer:"
+    IDS_M_BETATESTER        "Beta testers:"
+    IDS_M_ENDE              "- = THE END = -"
+    IDS_M_EMAILS            "Emails to: Spam84@gmx.de"
+    IDS_M_INFOABOUT         "About Chicken Tournament"
+    IDS_M_ANZAHL            "Number: %d"
+    IDS_M_CHICKEN           "Chickens"
+    IDS_M_STAELLE           "Chicken coops"
+    IDS_M_TREES             "Trees"
+    IDS_M_GARTENKRALLEN     "GardenClaws"
+    IDS_M_GOLFSCHLAEGER     "Golf Clubs"
+    IDS_M_DRESCHER          "Combine Harvesters"
+    IDS_M_PLASMACANNONS     "Plasma Guns"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_M_EINSTELLUNGEN     "Settings"
+    IDS_M_AIRCONTROL        "Air control (movement) [m/(s*s)]"
+    IDS_M_EGGDAMAGE         "Egg damage [1/100]"
+    IDS_M_GRAVITY           "Gravity [m/(s*s)]"
+    IDS_M_JUMPMULTIPLIER    "Jump factor [ ]"
+    IDS_M_PLASMARATE        "Plasma firing rate [s]"
+    IDS_M_PLASMAREGENERATION "Plasma regeneration [1/s]"
+    IDS_M_REGENERATEPOWER   "Flight power regeneration [1/s]"
+    IDS_M_SITSPEED          "Egg laying speed [1/s]"
+    IDS_M_TAKEPOWER         "Flight power drain speed [1/s]"
+    IDS_M_THROWTIME         "Egg firing rate [s]"
+    IDS_M_KI                "Artificial Intelligence"
+    IDS_C_INTRO1            "<<<<< Chicken Tournament - Console >>>>>"
+    IDS_C_INTRO2            "Enter HELP for all commands. Escape to close."
+    IDS_C_SERVERONLY        "Server can do this only!"
+    IDS_C_NOFLOAT           "No valid floating point value."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_C_VARCHANGED        "%s changed to %.2f"
+    IDS_C_FOGON             "Fog activated"
+    IDS_C_FOGOFF            "Fog deactivated"
+    IDS_C_ALLCOMMANDS       "All Commands:"
+    IDS_C_SPAWNPARAMETER    "Parameter expected:"
+    IDS_C_SPAWNPARAMETERS0  "Chicken"
+    IDS_C_SPAWNPARAMETERS1  "GardenClaw"
+    IDS_C_SPAWNPARAMETERS2  "Golf Club"
+    IDS_C_SPAWNPARAMETERS3  "Harvester"
+    IDS_C_SPAWNPARAMETERS4  "Tree"
+    IDS_C_SPAWNPARAMETERS5  "Chicken coop"
+    IDS_C_SPAWNPARAMETERS6  "Plasma Gun"
+    IDS_C_SPAWNPARAMETERS7  "Item"
+    IDS_C_SPAWNED           "%s created. Now %d."
+    IDS_C_INVALIDPARAMETER  "Invalid parameter."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_C_INVALIDUID        "No valid UID."
+    IDS_C_UIDNOTFOUND       "Object with that UID was not found."
+    IDS_C_OBJECTREMOVED     "Object %d (%s) was removed."
+    IDS_C_SPECULAROFF       "Specular highlights deactivated."
+    IDS_C_SPECULARON        "Specular highlights activated."
+    IDS_C_NEWWORLD          "You have changed the world."
+    IDS_C_MESSAGESENT       "Message was sent."
+    IDS_C_INSANEGORELEVEL   "You psycho!!! At your own risk, only!!!"
+    IDS_C_ALPHABLENDINGON   "Alphablending activated."
+    IDS_C_ALPHABLENDINGOFF  "Alphablending deactivated"
+    IDS_C_YOURNAME          "You are known as %s."
+    IDS_C_NAMECHANGED       "Name changed."
+    IDS_C_NEWRACE           "Specify new race:"
+    IDS_C_PLAYERTYPECHANGED "Race changed."
+    IDS_C_INVALIDCOMMAND    "< Command seems like garbage. Get all Commands with HELP. >"
+    IDS_C_OBJECTINFOS       "Object infos:"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_C_OBJECTINFO        "Object %d: UID=%d (%s)"
+    IDS_E_SESSIONLOST       "Session lost."
+    IDS_M_REFLECTIONS       "Reflections"
+    IDS_M_CROSSHAIR         "Crosshair"
+    IDS_T_HATS7             "Sunglasses"
+    IDS_M_PRESSURE          "Pressure of Plasmacannon"
+    IDS_M_RESPAWNTIME       "Respawn Time [s]"
+    IDS_E_KICKED            "You was kicked by the server!"
+    IDS_E_KICKEDYOURSELF    "You kicked your own dumb self."
+    IDS_T_CHICKENWASHIT     "%s got you!"
+    IDS_T_FARMERHASHIT      "You fragged %s!"
+    IDS_M_RESOLUTION        "Resolution"
+    IDS_M_APPLY             "Apply"
+    IDS_M_FULLSCREEN        "Fullscreenmode"
+    IDS_M_ANIMATIONS        "Animations"
+    IDS_M_THANKS            "Special thanks to:"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_M_GRASS             "Grass"
+    IDS_M_SHOWPLAYERNAMES   "Show player names"
+    IDS_C_SPAWNPARAMETERS8  "Farmer"
+    IDS_M_AI                "Artificial Stupidity:"
+    IDS_M_DIRESTRAITS       "(for having made marvelous music)"
+    IDS_M_FARMER            "Farmer"
+    IDS_M_FIRE              "Fire"
+    IDS_M_REVERSEFLIGHT     "Reverse mouse when flying"
+END
+
+#endif    // Neutral (Standard) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Deutsch (Deutschland) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONNECTION DIALOG DISCARDABLE  0, 0, 187, 111
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_MINIMIZEBOX | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Verbindung auswählen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST,5,5,120,85,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&OK",IDOK,130,5,50,14
+    PUSHBUTTON      "&Abbruch",IDCANCEL,130,20,50,14
+    CONTROL         "&DirectPlay Protokoll verwenden",IDC_DIRECTPLAYPROTOCOL,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,95,115,10
+    ICON            IDR_ICON,IDC_STATIC,145,55,20,20
+END
+
+IDD_GAMESETTINGS DIALOG DISCARDABLE  0, 0, 137, 191
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Spieleinstellungen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_GAME,5,15,70,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CHICKEN,5,45,55,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,65,45,11,
+                    14
+    EDITTEXT        IDC_FARMER,5,75,55,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin4",IDC_SPIN4,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,65,75,11,
+                    14
+    EDITTEXT        IDC_TREES,5,105,55,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,65,105,11,
+                    14
+    EDITTEXT        IDC_STALL,5,135,55,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin3",IDC_SPIN3,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,71,129,11,
+                    14
+    EDITTEXT        IDC_X,5,170,25,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_Z,40,170,25,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,80,5,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,80,22,50,14
+    LTEXT           "Spielname:",IDC_STATIC,5,5,36,8
+    LTEXT           "Computerhühner:",IDC_STATIC,5,35,55,8
+    LTEXT           "Bäume:",IDC_STATIC,5,95,25,8
+    LTEXT           "Weltgröße:",IDC_STATIC,5,159,36,8
+    LTEXT           "X",IDC_STATIC,31,172,8,8
+    LTEXT           "Meter",IDC_STATIC,67,172,19,8
+    LTEXT           "Ställe:",IDC_STATIC,5,124,20,8
+    LTEXT           "Computerbauern:",IDC_STATIC,5,65,55,8
+END
+
+IDD_GAMELIST DIALOG DISCARDABLE  0, 0, 317, 206
+STYLE DS_MODALFRAME | DS_CENTER | WS_CAPTION | WS_SYSMENU
+CAPTION "Multiplayer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Erstellen...",IDC_CREATE,5,185,55,14
+    LISTBOX         IDC_LIST,5,10,175,170,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_NAME,190,25,115,14,ES_AUTOHSCROLL
+    CONTROL         "Ba&uer",IDC_SPIELERTYP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,190,45,35,10
+    CONTROL         "&Huhn",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,190,55,33,
+                    10
+    DEFPUSHBUTTON   "&Beitreten",IDC_JOIN,70,185,55,14
+    CONTROL         "&Aktualisieren",IDC_REFRESH,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,130,185,50,14
+    CONTROL         "&Vollbild",IDC_FULLSCREEN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,190,90,38,10
+    CONTROL         "&32 Bit Texturen",IDC_32BPPTEXTURES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,240,90,64,10
+    COMBOBOX        IDC_RESOLUTION,190,110,115,82,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_DEVICE,190,140,115,95,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "&Intro zeigen",IDC_INTRO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,190,160,53,10
+    PUSHBUTTON      "Bee&nden",IDCANCEL,245,185,65,14
+    LTEXT           "Name:",IDC_STATIC,190,15,22,8
+    GROUPBOX        "Spieler",IDC_STATIC,185,5,125,65
+    GROUPBOX        "Grafik:",IDC_STATIC,185,75,125,105
+    LTEXT           "Auflösung:",IDC_STATIC,190,100,34,8
+    LTEXT           "Gerät:",IDC_STATIC,190,130,20,8
+    CONTROL         "&Sound",IDC_SOUND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    260,155,37,10
+    CONTROL         "&Musik",IDC_MUSIK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    260,165,35,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CONNECTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_GAMELIST, DIALOG
+    BEGIN
+        RIGHTMARGIN, 310
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+TREE1.BMP               BITMAP  DISCARDABLE     "tree1.bmp"
+BURGER.BMP              BITMAP  DISCARDABLE     "ChickenBurger.bmp"
+BAUER.BMP               BITMAP  DISCARDABLE     "bauer.bmp"
+EIER.BMP                BITMAP  DISCARDABLE     "eier.bmp"
+HERZ.BMP                BITMAP  DISCARDABLE     "herz.bmp"
+FLUGHUHN.BMP            BITMAP  DISCARDABLE     "flughuhn.bmp"
+PLASMABALL.BMP          BITMAP  DISCARDABLE     "plasmaball.bmp"
+IDB_LOADING             BITMAP  DISCARDABLE     "AKT.BMP"
+IDB_LOADINGMASK         BITMAP  DISCARDABLE     "LOADING.BMP"
+IDB_OK                  BITMAP  DISCARDABLE     "CHECK.BMP"
+IDB_OKMASK              BITMAP  DISCARDABLE     "OKMASK.BMP"
+CROSSHAIR1.BMP          BITMAP  DISCARDABLE     "crosshair1.bmp"
+BLOOD.BMP               BITMAP  DISCARDABLE     "blood.bmp"
+TREE4.BMP               BITMAP  DISCARDABLE     "tree4.bmp"
+TREE2.BMP               BITMAP  DISCARDABLE     "tree2.bmp"
+TREE3.BMP               BITMAP  DISCARDABLE     "tree3.bmp"
+WALD.BMP                BITMAP  DISCARDABLE     "wald.bmp"
+GRASS.BMP               BITMAP  DISCARDABLE     "grass.bmp"
+ZEIGER.BMP              BITMAP  DISCARDABLE     "zeiger.bmp"
+TACHO1.BMP              BITMAP  DISCARDABLE     "tacho1.bmp"
+TACHO2.BMP              BITMAP  DISCARDABLE     "tacho2.bmp"
+CURSOR1.BMP             BITMAP  DISCARDABLE     "cursor1.bmp"
+CURSOR2.BMP             BITMAP  DISCARDABLE     "cursor2.bmp"
+CURSOR3.BMP             BITMAP  DISCARDABLE     "cursor3.bmp"
+CURSOR4.BMP             BITMAP  DISCARDABLE     "cursor4.bmp"
+CURSOR5.BMP             BITMAP  DISCARDABLE     "cursor5.bmp"
+WATER.BMP               BITMAP  DISCARDABLE     "water.bmp"
+FEDER.BMP               BITMAP  DISCARDABLE     "FEDER.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+GLUCKE.WAV              WAVE    DISCARDABLE     "GLUCKE.WAV"
+SPLAT.WAV               WAVE    DISCARDABLE     "splat.wav"
+THROW.WAV               WAVE    DISCARDABLE     "throw.wav"
+FORK.WAV                WAVE    DISCARDABLE     "fork.wav"
+METAL.WAV               WAVE    DISCARDABLE     "metal.wav"
+GLUCKE2.WAV             WAVE    DISCARDABLE     "glucke2.wav"
+#if defined(APSTUDIO_INVOKED) || defined(UTSOUNDS)
+#if defined(APSTUDIO_INVOKED)
+MONSTERKILL.WAV$(UTSOUNDS) WAVE    DISCARDABLE     "monsterkill.wav"
+#else
+MONSTERKILL.WAV         WAVE    DISCARDABLE     "monsterkill.wav"
+#endif
+#endif
+#if defined(APSTUDIO_INVOKED) || defined(UTSOUNDS)
+#if defined(APSTUDIO_INVOKED)
+MULTIKILL.WAV$(UTSOUNDS) WAVE    DISCARDABLE     "multikill.wav"
+#else
+MULTIKILL.WAV           WAVE    DISCARDABLE     "multikill.wav"
+#endif
+#endif
+#if defined(APSTUDIO_INVOKED) || defined(UTSOUNDS)
+#if defined(APSTUDIO_INVOKED)
+ULTRAKILL.WAV$(UTSOUNDS) WAVE    DISCARDABLE     "ultrakill.wav"
+#else
+ULTRAKILL.WAV           WAVE    DISCARDABLE     "ultrakill.wav"
+#endif
+#endif
+#if defined(APSTUDIO_INVOKED) || defined(UTSOUNDS)
+#if defined(APSTUDIO_INVOKED)
+DOUBLEKILL.WAV$(UTSOUNDS) WAVE    DISCARDABLE     "doublekill.wav"
+#else
+DOUBLEKILL.WAV          WAVE    DISCARDABLE     "doublekill.wav"
+#endif
+#endif
+WADE.WAV                WAVE    DISCARDABLE     "wade.wav"
+JUMP.WAV                WAVE    DISCARDABLE     "jump.wav"
+STEP1.WAV               WAVE    DISCARDABLE     "step1.wav"
+STEP2.WAV               WAVE    DISCARDABLE     "step2.wav"
+STEP3.WAV               WAVE    DISCARDABLE     "step3.wav"
+STEP4.WAV               WAVE    DISCARDABLE     "step4.wav"
+ENGINE.WAV              WAVE    DISCARDABLE     "engine.wav"
+EISPLAT.WAV             WAVE    DISCARDABLE     "eisplat.wav"
+#if defined(APSTUDIO_INVOKED) || defined(UTSOUNDS)
+#if defined(APSTUDIO_INVOKED)
+DENIED.WAV$(UTSOUNDS)   WAVE    DISCARDABLE     "denied.wav"
+#else
+DENIED.WAV              WAVE    DISCARDABLE     "denied.wav"
+#endif
+#endif
+BODYSPLAT.WAV           WAVE    DISCARDABLE     "bodysplat.wav"
+#if defined(APSTUDIO_INVOKED) || defined(UTSOUNDS)
+#if defined(APSTUDIO_INVOKED)
+UNSTOPPABLE.WAV$(UTSOUNDS) WAVE    DISCARDABLE     "unstoppable.wav"
+#else
+UNSTOPPABLE.WAV         WAVE    DISCARDABLE     "unstoppable.wav"
+#endif
+#endif
+#if defined(APSTUDIO_INVOKED) || defined(UTSOUNDS)
+#if defined(APSTUDIO_INVOKED)
+DOMINATING.WAV$(UTSOUNDS) WAVE    DISCARDABLE     "dominating.wav"
+#else
+DOMINATING.WAV          WAVE    DISCARDABLE     "dominating.wav"
+#endif
+#endif
+#if defined(APSTUDIO_INVOKED) || defined(UTSOUNDS)
+#if defined(APSTUDIO_INVOKED)
+GODLIKE.WAV$(UTSOUNDS)  WAVE    DISCARDABLE     "godlike.wav"
+#else
+GODLIKE.WAV             WAVE    DISCARDABLE     "godlike.wav"
+#endif
+#endif
+#if defined(APSTUDIO_INVOKED) || defined(UTSOUNDS)
+#if defined(APSTUDIO_INVOKED)
+KILLINGSPREE.WAV$(UTSOUNDS) WAVE    DISCARDABLE     "killingspree.wav"
+#else
+KILLINGSPREE.WAV        WAVE    DISCARDABLE     "killingspree.wav"
+#endif
+#endif
+#if defined(APSTUDIO_INVOKED) || defined(UTSOUNDS)
+#if defined(APSTUDIO_INVOKED)
+RAMPAGE.WAV$(UTSOUNDS)  WAVE    DISCARDABLE     "rampage.wav"
+#else
+RAMPAGE.WAV             WAVE    DISCARDABLE     "rampage.wav"
+#endif
+#endif
+PLASMA.WAV              WAVE    DISCARDABLE     "Plasma.wav"
+PLASMA2.WAV             WAVE    DISCARDABLE     "plasma2.wav"
+COOL.WAV                WAVE    DISCARDABLE     "COOL.wav"
+ITEM.WAV                WAVE    DISCARDABLE     "item.wav"
+#if defined(APSTUDIO_INVOKED) || defined(UTSOUNDS)
+#if defined(APSTUDIO_INVOKED)
+WHICKEDSICK.WAV$(UTSOUNDS) WAVE    DISCARDABLE     "WhickedSick.wav"
+#else
+WHICKEDSICK.WAV         WAVE    DISCARDABLE     "WhickedSick.wav"
+#endif
+#endif
+#if defined(APSTUDIO_INVOKED) || defined(UTSOUNDS)
+#if defined(APSTUDIO_INVOKED)
+MEGAKILL.WAV$(UTSOUNDS) WAVE    DISCARDABLE     "megakill.wav"
+#else
+MEGAKILL.WAV            WAVE    DISCARDABLE     "megakill.wav"
+#endif
+#endif
+#if defined(APSTUDIO_INVOKED) || defined(UTSOUNDS)
+#if defined(APSTUDIO_INVOKED)
+LUDICROUSKILL.WAV$(UTSOUNDS) WAVE    DISCARDABLE     "LudicrousKill.wav"
+#else
+LUDICROUSKILL.WAV       WAVE    DISCARDABLE     "LudicrousKill.wav"
+#endif
+#endif
+#if defined(APSTUDIO_INVOKED) || defined(UTSOUNDS)
+#if defined(APSTUDIO_INVOKED)
+HOLYSHIT.WAV$(UTSOUNDS) WAVE    DISCARDABLE     "HolyShit.wav"
+#else
+HOLYSHIT.WAV            WAVE    DISCARDABLE     "HolyShit.wav"
+#endif
+#endif
+FIRE.WAV                WAVE    DISCARDABLE     "fire.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// JPEG
+//
+
+GROUND.JPG              JPEG    DISCARDABLE     "ground_small.JPG"
+FLARE3.JPG              JPEG    DISCARDABLE     "flare3.JPG"
+FLARE0.JPG              JPEG    DISCARDABLE     "flare0.jpg"
+FLARE1.JPG              JPEG    DISCARDABLE     "flare1.JPG"
+FLARE2.JPG              JPEG    DISCARDABLE     "flare2.JPG"
+SKY5.JPG                JPEG    DISCARDABLE     "Sky5.jpg"
+SKY0.JPG                JPEG    DISCARDABLE     "Sky0.jpg"
+SKY1.JPG                JPEG    DISCARDABLE     "Sky1.jpg"
+SKY2.JPG                JPEG    DISCARDABLE     "Sky2.jpg"
+SKY3.JPG                JPEG    DISCARDABLE     "Sky3.jpg"
+SKY4.JPG                JPEG    DISCARDABLE     "Sky4.jpg"
+SPLASH.JPG              JPEG    DISCARDABLE     "splash.jpg"
+STALL.JPG               JPEG    DISCARDABLE     "stall.jpg"
+IMAGE1.JPG              JPEG    DISCARDABLE     "image1.jpg"
+IMAGE2.JPG              JPEG    DISCARDABLE     "image2.jpg"
+IMAGE4.JPG              JPEG    DISCARDABLE     "image4.jpg"
+IMAGE3.JPG              JPEG    DISCARDABLE     "image3.jpg"
+IMAGE5.JPG              JPEG    DISCARDABLE     "image5.JPG"
+IMAGE6.JPG              JPEG    DISCARDABLE     "image6.JPG"
+IMAGE7.JPG              JPEG    DISCARDABLE     "image7.JPG"
+IMAGE8.JPG              JPEG    DISCARDABLE     "image8.JPG"
+PLASMA.JPG              JPEG    DISCARDABLE     "plasma.jpg"
+BRATHUHN.JPG            JPEG    DISCARDABLE     "brathuhn.jpg"
+STRIPES.JPG             JPEG    DISCARDABLE     "stripes.jpg"
+MEDIC.JPG               JPEG    DISCARDABLE     "medic.jpg"
+SPHEREMAP.JPG           JPEG    DISCARDABLE     "spheremap.jpg"
+IMAGE9.JPG              JPEG    DISCARDABLE     "image9.jpg"
+IMAGE10.JPG             JPEG    DISCARDABLE     "image10.jpg"
+IMAGE11.JPG             JPEG    DISCARDABLE     "image11.jpg"
+BARK.JPG                JPEG    DISCARDABLE     "bark.JPG"
+IMAGE12.JPG             JPEG    DISCARDABLE     "image12.jpg"
+IMAGE15.JPG             JPEG    DISCARDABLE     "image15.jpg"
+IMAGE13.JPG             JPEG    DISCARDABLE     "image13.jpg"
+IMAGE14.JPG             JPEG    DISCARDABLE     "image14.jpg"
+FIRE.JPG                JPEG    DISCARDABLE     "fire.jpg"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PACK
+//
+
+MUSIC.DAT               PACK    DISCARDABLE     "..\\Musik\\Music.dat"
+PLASMA.SPR              PACK    DISCARDABLE     "..\\sprites\\plasma.spr"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// X
+//
+
+MODELS.X                X       DISCARDABLE     "models.x"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_ICON                ICON    DISCARDABLE     "ICON1.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_NONE                CURSOR  DISCARDABLE     "cur00001.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_E_CRITICAL          "Chicken Tournament wurde durch einen schweren Fehler unerwartet beendet.\nFehlercode: 0x%.8x, Addresse: 0x%.8x."
+    IDS_E_TITLE             "Chicken Tournament - Fehler!"
+    IDS_E_INIT              "Kann Spiel nicht initialisieren. (#1)"
+    IDS_E_MODELS            "Kann Modelle nicht laden. (#2)"
+    IDS_E_INTRO             "Kann Intro Video nicht zeigen. (#3)"
+    IDS_E_MUSIC             "Musik konnte nicht initialisiert werden! (#4)"
+    IDS_E_INITWINDOW        "Kann Fenster nicht erstellen. (#5)"
+    IDS_E_DDRAW             "Kann DirectDraw nicht initialisieren. (#6)"
+    IDS_E_SETCOOPERATIVELEVEL "SetCooperativeLevel fehlgeschlagen. (#7)"
+    IDS_E_DISPLAYMODE       "SetDisplayMode fehlgeschlagen. (#8)"
+    IDS_E_PRIMARYSURFACE    "Kann Primäre Surface nicht erstellen. (#9)"
+    IDS_E_CLIPPER           "Kann Clipper nicht initialisieren. (#10)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_E_GETBACKBUFFER     "Kann Hintergrundpuffer nicht abfragen. (#11)"
+    IDS_E_CREATEBACKBUFFER  "Kann Hintergrundpuffer nicht erstellen. (#12)"
+    IDS_E_NOZBUFFER         "Kein geeigneter Z-Buffer gefunden. (#13)"
+    IDS_E_CREATEZBUFFER     "Kann Z-Buffer nicht erstellen. (#14)"
+    IDS_E_NOUPDATEAFTERZBUFFER 
+                            "Kann 3D Device nach neuem Z-Buffer nicht aktualisieren. (#15)"
+    IDS_E_D3D               "Kann Direct3D nicht initialisieren. (#16)"
+    IDS_E_NOD3D7            "Kann Direct 3D 7 Schnittstelle nicht abfragen. (#17)"
+    IDS_E_CREATEDEVICE      "Kann 3D Device nicht erstellen. (#18)"
+    IDS_E_VIEWPORT          "Kann Viewport für das 3D Device nicht festlegen. (#19)"
+    IDS_E_DIRECTSOUND       "Kann DirectSound nicht initialisieren. (#20)"
+    IDS_E_DSSETCOOPERATIVELEVEL 
+                            "DirectSound SetCooperativeLevel fehlgeschlagen. (#21)"
+    IDS_E_PRIMARYBUFFER     "Fehler beim Erstellen des Primären Soundbuffers. (#22)"
+    IDS_E_DIRECTINPUT       "Kann DirectInput nicht initialisieren. (#23)"
+    IDS_E_LOADSOUNDS        "Kann Sounds nicht laden. (#24)"
+    IDS_E_LOADTEXTURES      "Kann Texturen nicht laden. (#25)"
+    IDS_E_LOADSPRITES       "Kann Sprites nicht laden. (#26)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_E_RESTORETEXTURES   "Texturen konnten nicht korrekt wiederhergestellt werden. (#27)"
+    IDS_T_CLASSNAME         "MyMainWindow"
+    IDS_T_TITLESERVER       "Chicken Tournament - Server"
+    IDS_T_TITLECLIENT       "Chicken Tournament - Client"
+    IDS_T_WIREFRAME1        "Wireframe Punktmodus"
+    IDS_T_WIREFRAME2        "Wireframe deaktiviert"
+    IDS_T_WIREFRAME3        "Wireframe aktiviert"
+    IDS_T_LOADING           "Lade..."
+    IDS_T_LOADED0           "3D Engine"
+    IDS_T_LOADED1           "Sounds"
+    IDS_T_LOADED2           "Eingabegeräte"
+    IDS_T_LOADED3           "Zeitgeber"
+    IDS_T_LOADED4           "Texturen"
+    IDS_T_LOADED5           "Modelle"
+    IDS_T_LOADED6           "Objekte"
+    IDS_T_LOADED7           "Musik"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_T_LOADED8           "Synchronisiere Netzwerk"
+    IDS_T_SOUNDON           "Sound an"
+    IDS_T_SOUNDOFF          "Sound aus"
+    IDS_T_MUSICOFF          "Musik aus"
+    IDS_T_MUSICON           "Musik an"
+    IDS_T_SCREENSHOTSAVED   "Screenshot auf Desktop abgespeichert."
+    IDS_T_MOUSEREVERSED     "Vertikale Mausrichtung umgekehrt."
+    IDS_T_MOUSENORMAL       "Vertikale Mausrichtung zurückgesetzt."
+    IDS_T_TOT               "Du bist tot!"
+    IDS_T_GOLFEND           "%.1f Meter"
+    IDS_T_CHICKENHASHIT     "Du hast %s auf dem Gewissen."
+    IDS_T_FARMERWASHIT      "Du wurdest von %s getötet."
+    IDS_T_HATS0             "Keinen Hut"
+    IDS_T_HATS1             "Zylinder"
+    IDS_T_HATS2             "Cowboyhut"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_T_HATS3             "Krone"
+    IDS_T_HATS4             "Zipfelmütze"
+    IDS_T_HATS5             "Bratpfanne"
+    IDS_T_HATS6             "Kochmütze"
+    IDS_T_HAT               "%s aufgesetzt."
+    IDS_T_GOTGARTENKRALLE   "Gartenkralle Gold 500"
+    IDS_T_GOTGOLFER         "Golfschläger"
+    IDS_T_GOTDRESCHER       "Mähdrescher"
+    IDS_T_GOTPLASMA         "Plasma Kanone"
+    IDS_T_GAMENAME          "%ss Spiel"
+    IDS_T_INVALIDSIZE       "Breite und Höhe müssen zwischen 10 und 1000 Metern liegen!"
+    IDS_T_INVALIDSIZETITLE  "Wahnsinniger!!!"
+    IDS_T_ERRORENUMSESSIONS "Ein Fehler ist aufgetreten (#%d)."
+    IDS_T_NOSESSIONS        "Nix gefunden."
+    IDS_T_REFRESH           "Bitte auf Aktualisieren drücken!"
+    IDS_E_CREATEGAME        "Kann Spiel nicht erstellen!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_E_CREATEPLAYER      "Kann Spieler nicht erstellen!"
+    IDS_E_JOINGAME          "Kann Spiel nicht beitreten!"
+    IDS_T_JOINED            "%s ist dem Spiel beigetreten."
+    IDS_T_LEFT              "%s hat das Spiel verlassen."
+    IDS_T_NEWSERVER         "Du bist jetzt der neue Leiter des Spiels."
+    IDS_T_NAMECHANGED       "%s heißt jetzt %s."
+    IDS_T_SERVERCHANGEDWORLD "Der Server hat die Welt verändert."
+    IDS_T_LOSGEHTS          "Los geht's!"
+    IDS_T_SERVERCAT         " (Server)"
+    IDS_T_PLAYERTYPES0      "Bauer"
+    IDS_T_PLAYERTYPES1      "Huhn"
+    IDS_T_PLAYER            "Spieler"
+    IDS_T_NAME              "Name"
+    IDS_T_ID                "ID"
+    IDS_T_KILLS             "Kills"
+    IDS_T_PING              "Ping"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_T_TYPE              "Typ"
+    IDS_M_MAINMENU          "Hauptmenü"
+    IDS_M_CONTINUE          "Fortsetzen"
+    IDS_M_OPTIONS           "Optionen"
+    IDS_M_SERVEROPTIONS     "Server Optionen"
+    IDS_M_INFO              "Info"
+    IDS_M_EXIT              "Beenden"
+    IDS_M_BACK              "Zurück"
+    IDS_M_FOG               "Nebel"
+    IDS_M_SPECULAR          "Glanzlichter"
+    IDS_M_VSYNC             "Vertikale Synchronisation"
+    IDS_M_BLOOD             "Blut"
+    IDS_M_FEDERN            "Federn"
+    IDS_M_GIBS              "Leichenteile"
+    IDS_M_BLOODAMOUNT       "Menge Blut:"
+    IDS_M_SOUND             "Sound"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_M_UNREALSOUND       "Unreal Feedback"
+    IDS_M_GACKERN           "Hühnergackern"
+    IDS_M_MUSIC             "Musik"
+    IDS_M_REVERSEMOUSE      "Maus umkehren"
+    IDS_M_SMOOTHMOUSE       "Mausbewegung glätten"
+    IDS_M_MOUSESENSITIVITY  "Maus Empfindlichkeit:"
+    IDS_M_GOLFERGEBNISSE    "Golfergebnisse anzeigen"
+    IDS_M_GRAFIK            "Grafik"
+    IDS_M_SONSTIGES         "Sonstiges"
+    IDS_M_ALPHABLENDING     "Alphablending"
+    IDS_M_HAUPTIDEE         "Hauptidee:"
+    IDS_M_VORSCHLAEGE       "Konstruktive Vorschläge:"
+    IDS_M_PROGRAMMIERER     "Programmierer:"
+    IDS_M_GRAFIKER          "Grafiker:"
+    IDS_M_TEXTUREN          "Texturen:"
+    IDS_M_SPRITES           "Sprites:"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_M_MODELLE           "Modelle:"
+    IDS_M_SOUNDS            "Sounds:"
+    IDS_M_MUSIK             "Musik:"
+    IDS_M_NETWORK           "Netzwerk:"
+    IDS_M_BETATESTER        "Beta Tester:"
+    IDS_M_ENDE              "- = ENDE = -"
+    IDS_M_EMAILS            "Emails an: Spam84@gmx.de"
+    IDS_M_INFOABOUT         "Info über Chicken Tournament"
+    IDS_M_ANZAHL            "Anzahl: %d"
+    IDS_M_CHICKEN           "Hühner"
+    IDS_M_STAELLE           "Ställe"
+    IDS_M_TREES             "Bäume"
+    IDS_M_GARTENKRALLEN     "Gartenkrallen"
+    IDS_M_GOLFSCHLAEGER     "Golfschläger"
+    IDS_M_DRESCHER          "Mähdrescher"
+    IDS_M_PLASMACANNONS     "Plasma Kanonen"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_M_EINSTELLUNGEN     "Einstellungen"
+    IDS_M_AIRCONTROL        "Bewegung im Sprung [m/(s*s)]"
+    IDS_M_EGGDAMAGE         "Eier Schaden [1/100]"
+    IDS_M_GRAVITY           "Gravitation [m/(s*s)]"
+    IDS_M_JUMPMULTIPLIER    "Sprungmultiplikator [ ]"
+    IDS_M_PLASMARATE        "Plasmaschuss Rate [s]"
+    IDS_M_PLASMAREGENERATION "Plasmaschussregenerierung [1/s]"
+    IDS_M_REGENERATEPOWER   "Flugkraftregeneration [1/s]"
+    IDS_M_SITSPEED          "Brütgeschwindigkeit [1/s]"
+    IDS_M_TAKEPOWER         "Flugkraftverbrauch [1/s]"
+    IDS_M_THROWTIME         "Wurfzeit der Eier [s]"
+    IDS_M_KI                "Künstliche Intelligenz"
+    IDS_C_INTRO1            "<<<<< Chicken Tournament - Konsole >>>>>"
+    IDS_C_INTRO2            "HELP eingeben für alle Befehle. Escape zum Verlassen."
+    IDS_C_SERVERONLY        "Das darf nur der Server!"
+    IDS_C_NOFLOAT           "Keine gültige Fließkommazahl."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_C_VARCHANGED        "%s geändert auf %.2f"
+    IDS_C_FOGON             "Nebel aktiviert"
+    IDS_C_FOGOFF            "Nebel deaktiviert"
+    IDS_C_ALLCOMMANDS       "Alle Befehle:"
+    IDS_C_SPAWNPARAMETER    "Erwarte einen Parameter:"
+    IDS_C_SPAWNPARAMETERS0  "Huhn"
+    IDS_C_SPAWNPARAMETERS1  "Gartenkralle"
+    IDS_C_SPAWNPARAMETERS2  "Golfschläger"
+    IDS_C_SPAWNPARAMETERS3  "Mähdrescher"
+    IDS_C_SPAWNPARAMETERS4  "Baum"
+    IDS_C_SPAWNPARAMETERS5  "Hühnerstall"
+    IDS_C_SPAWNPARAMETERS6  "Plasma Kanone"
+    IDS_C_SPAWNPARAMETERS7  "Item"
+    IDS_C_SPAWNED           "%s erstellt. Sind jetzt %d."
+    IDS_C_INVALIDPARAMETER  "Parameter ist ungültig."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_C_INVALIDUID        "Keine gültige UID angegeben."
+    IDS_C_UIDNOTFOUND       "Objekt mit der angegebenen UID wurde nicht gefunden."
+    IDS_C_OBJECTREMOVED     "Objekt %d (%s) wurde entfernt."
+    IDS_C_SPECULAROFF       "Glanzlichter deaktiviert."
+    IDS_C_SPECULARON        "Glanzlichter aktiviert."
+    IDS_C_NEWWORLD          "Du hast die Welt verändert."
+    IDS_C_MESSAGESENT       "Nachricht gesendet."
+    IDS_C_INSANEGORELEVEL   "Bist du bekloppt? Auf eigene Verantwortung!!!"
+    IDS_C_ALPHABLENDINGON   "Alpha-Blending aktiviert."
+    IDS_C_ALPHABLENDINGOFF  "Alpha-Blending deaktiviert."
+    IDS_C_YOURNAME          "Dein Name ist %s."
+    IDS_C_NAMECHANGED       "Name geändert."
+    IDS_C_NEWRACE           "Bitte neuen Typ angeben:"
+    IDS_C_PLAYERTYPECHANGED "Spielertyp geändert."
+    IDS_C_INVALIDCOMMAND    "< Eingabe nicht kapiert. Alle Befehle gibt's mit HELP. >"
+    IDS_C_OBJECTINFOS       "Objektinfos:"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_C_OBJECTINFO        "Objekt %d: UID=%d (%s)"
+    IDS_E_SESSIONLOST       "Netzwerkverbindung verloren."
+    IDS_M_REFLECTIONS       "Reflektionen"
+    IDS_M_CROSSHAIR         "Fadenkreuz"
+    IDS_T_HATS7             "Sonnenbrille"
+    IDS_M_PRESSURE          "Druckwelle der Plasmakanone"
+    IDS_M_RESPAWNTIME       "Respawn Zeit [s]"
+    IDS_E_KICKED            "Der Server hat dich aus dem Spiel geworfen."
+    IDS_E_KICKEDYOURSELF    "Du Idiot hast dich selber aus dem Spiel entfernt."
+    IDS_T_CHICKENWASHIT     "Du wurdest von %s getötet!"
+    IDS_T_FARMERHASHIT      "Du hast aus %s einen Burger gemacht!"
+    IDS_M_RESOLUTION        "Auflösung"
+    IDS_M_APPLY             "Übernehmen"
+    IDS_M_FULLSCREEN        "Vollbildmodus"
+    IDS_M_ANIMATIONS        "Animationen"
+    IDS_M_THANKS            "Dank an:"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_M_GRASS             "Gras"
+    IDS_M_SHOWPLAYERNAMES   "Spielernamen zeigen"
+    IDS_C_SPAWNPARAMETERS8  "Bauer"
+    IDS_M_AI                "Künstliche Dummheit:"
+    IDS_M_DIRESTRAITS       "(Für ihre wunderbare Musik)"
+    IDS_M_FARMER            "Bauern"
+    IDS_M_FIRE              "Feuer"
+    IDS_M_REVERSEFLIGHT     "Maus im Flug umkehren"
+END
+
+#endif    // Deutsch (Deutschland) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

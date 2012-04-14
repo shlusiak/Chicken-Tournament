@@ -1,0 +1,20 @@
+LIBRARY		"Resources"
+DESCRIPTION  'Resources Library'
+
+EXPORTS
+
+LoadPicture;
+LoadPictureFromMemory;
+SaveBitmap;
+;LoadAniCursor;
+
+CreateSoundBuffer;
+CreateSound3DBuffer;
+
+LoadPackage;
+FreePackage;
+LoadPackageData;
+LoadNextPackageData;
+
+GetDllInstance;
+HasUTSounds;
