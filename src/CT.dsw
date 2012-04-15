@@ -1,0 +1,107 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNUNG: DIESE ARBEITSBEREICHSDATEI DARF NICHT BEARBEITET ODER GELÖSCHT WERDEN!
+
+###############################################################################
+
+Project: "Bind"=.\Bind\Bind.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CT/Bind", XKAAAAAA
+    .\bind
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "HelperLib"=.\HelperLib\HelperLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CT/HelperLib", CKAAAAAA
+    .\helperlib
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "CT"=.\CT.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CT", VFAAAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name HelperLib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Resources
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Register4Lobby"=.\Register4Lobby\Register4Lobby.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CT/Register4Lobby", HLAAAAAA
+    .\register4lobby
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Resources"=.\Resources\Resources.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CT/Resources", BDAAAAAA
+    .\resources
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CT/Resources", RIAAAAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+
