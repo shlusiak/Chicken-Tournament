@@ -131,12 +131,12 @@ LPDIRECTDRAWSURFACE7 CreateTexture(const LPDIRECT3DDEVICE7 lpDevice,PDWORD w,PDW
 
 
     // Adjust width and height, if the driver requires it
-    if( ddDesc.dpcTriCaps.dwTextureCaps & D3DPTEXTURECAPS_POW2 )
+//    if( ddDesc.dpcTriCaps.dwTextureCaps & D3DPTEXTURECAPS_POW2 )
     {
 		for( ddsd.dwWidth=1;  dwWidth>ddsd.dwWidth;   ddsd.dwWidth<<=1 );
 		for( ddsd.dwHeight=1; dwHeight>ddsd.dwHeight; ddsd.dwHeight<<=1 );
 	}
-	if( ddDesc.dpcTriCaps.dwTextureCaps & D3DPTEXTURECAPS_SQUAREONLY )
+//	if( ddDesc.dpcTriCaps.dwTextureCaps & D3DPTEXTURECAPS_SQUAREONLY )
 	{
         if( ddsd.dwWidth > ddsd.dwHeight ) ddsd.dwHeight = ddsd.dwWidth;
 		else                               ddsd.dwWidth  = ddsd.dwHeight;
