@@ -687,11 +687,11 @@ void CInfo::PerformCommand(int command,DWORD p1,int p2)
 		break;
 	case 2:
 		CloseWindow(game->wnd);
-		ShellExecute(game->wnd,NULL,"mailto:Spam84@gmx.de?subject=Chicken Tournament",NULL,NULL,SW_SHOW);
+		ShellExecute(game->wnd,NULL,"mailto:mail@saschahlusiak.de?subject=Chicken Tournament",NULL,NULL,SW_SHOW);
 		break;
 	case 3:
 		CloseWindow(game->wnd);
-		ShellExecute(game->wnd,NULL,"http://www.sascha.hlusiak.de",NULL,NULL,SW_SHOW);
+		ShellExecute(game->wnd,NULL,"http://www.saschahlusiak.de",NULL,NULL,SW_SHOW);
 		break;
 	}
 }
