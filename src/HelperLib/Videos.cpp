@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "videos.h"
-#include "uuids.h"
-#include "control.h"
+//#include "uuids.h"
+//#include "control.h"
 
 
 /*
@@ -115,7 +115,7 @@ BOOLEAN ShowVideo(const HINSTANCE hInstance,const PCHAR filename)
 
 
 #include "dshow.h"
-#include "atlbase.h"
+//#include "atlbase.h"
 
 
 const WM_GRAPHNOTIFY=WM_USER+31;
