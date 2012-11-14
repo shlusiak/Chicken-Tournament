@@ -336,7 +336,7 @@ const HRESULT CD3DFileObject::ComputeNormals()
     }
 
     // Assign the newly computed normals back to the vertices
-    for( i=0; i<m_dwNumVertices; i++ )
+    for( unsigned int i=0; i<m_dwNumVertices; i++ )
     {
         // Provide some relief to bogus normals
         if( Magnitude( pNormals[i] ) < 0.1f ) 

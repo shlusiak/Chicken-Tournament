@@ -118,7 +118,7 @@ BOOLEAN ShowVideo(const HINSTANCE hInstance,const PCHAR filename)
 //#include "atlbase.h"
 
 
-const WM_GRAPHNOTIFY=WM_USER+31;
+const int WM_GRAPHNOTIFY=WM_USER+31;
 
 
 

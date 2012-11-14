@@ -4,7 +4,7 @@
 #include "cursor.h"
 
 
-const MAX_CHILD=100;
+const int MAX_CHILD=100;
 
 
 class CWnd

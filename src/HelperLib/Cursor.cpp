@@ -33,8 +33,8 @@ void CCursor::Draw(LPDIRECTDRAWSURFACE7 lpSurf,const int w,const int h)const
 	if (lpSurface[curframe]==NULL)return;
 	if ((CursorPos.x<0)||(CursorPos.y<0)||(CursorPos.x>w)||(CursorPos.y>w))return;
 
-	const hotspotx=10;
-	const hotspoty=5;
+	const int hotspotx=10;
+	const int hotspoty=5;
 
 #ifdef STRETCHCURSOR
 	const int cw=(width*w)/800;
