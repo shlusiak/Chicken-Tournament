@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\Sascha\Documents\GitHub\Chicken-Tournament\directxsdk\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Sascha\Documents\GitHub\Chicken-Tournament\directxsdk\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Sascha\Documents\GitHub\Chicken-Tournament\directxsdk\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Sascha\Documents\GitHub\Chicken-Tournament\directxsdk\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release\CT.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\CT.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0407</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\CT.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>Release/CT.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;ddraw.lib;d3dim.lib;winmm.lib;dxguid.lib;d3dx.lib;dinput.lib;dsound.lib;d3dxof.lib;amstrmid.lib;helperlib.lib;resources.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <StackReserveSize>1</StackReserveSize>
+      <StackCommitSize>1</StackCommitSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\CT.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\CT.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0407</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\CT.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>Debug/CT.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;ddraw.lib;d3dim.lib;winmm.lib;dxguid.lib;d3dx.lib;dinput.lib;dsound.lib;d3dxof.lib;amstrmid.lib;helperlib.lib;resources.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Bauer.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="ChatWindow.cpp" />
+    <ClCompile Include="Chicken.cpp" />
+    <ClCompile Include="ChickenPlayer.cpp" />
+    <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="ComputerBauer.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="Console.cpp" />
+    <ClCompile Include="Drescher.cpp" />
+    <ClCompile Include="Effects.cpp" />
+    <ClCompile Include="Ei.cpp" />
+    <ClCompile Include="EnvMap.cpp" />
+    <ClCompile Include="Fire.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameInit.cpp" />
+    <ClCompile Include="Gartenkralle.cpp" />
+    <ClCompile Include="Gibs.cpp" />
+    <ClCompile Include="Golfer.cpp" />
+    <ClCompile Include="Gras.cpp" />
+    <ClCompile Include="Items.cpp" />
+    <ClCompile Include="ki.cpp" />
+    <ClCompile Include="LensFlare.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Multiplayer.cpp" />
+    <ClCompile Include="Music.cpp" />
+    <ClCompile Include="ObjChain.cpp" />
+    <ClCompile Include="Objects.cpp" />
+    <ClCompile Include="ParticleSystem.cpp" />
+    <ClCompile Include="PlasmaCannon.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Radar.cpp" />
+    <ClCompile Include="ServerWnd.cpp" />
+    <ClCompile Include="Shadows.cpp" />
+    <ClCompile Include="Sounds.cpp" />
+    <ClCompile Include="Sprites.cpp" />
+    <ClCompile Include="Stall.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Text.cpp" />
+    <ClCompile Include="Transitions.cpp" />
+    <ClCompile Include="Tree.cpp" />
+    <ClCompile Include="ui.cpp" />
+    <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="wnd.cpp" />
+    <ClCompile Include="World.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="Bauer.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="ChatWindow.h" />
+    <ClInclude Include="Chicken.h" />
+    <ClInclude Include="ChickenPlayer.h" />
+    <ClInclude Include="Collision.h" />
+    <ClInclude Include="ComputerBauer.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="Drescher.h" />
+    <ClInclude Include="Effects.h" />
+    <ClInclude Include="Ei.h" />
+    <ClInclude Include="EnvMap.h" />
+    <ClInclude Include="Fire.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Gartenkralle.h" />
+    <ClInclude Include="General.h" />
+    <ClInclude Include="Gibs.h" />
+    <ClInclude Include="Golfer.h" />
+    <ClInclude Include="Gras.h" />
+    <ClInclude Include="ids.h" />
+    <ClInclude Include="Items.h" />
+    <ClInclude Include="ki.h" />
+    <ClInclude Include="Lensflare.h" />
+    <ClInclude Include="Multiplayer.h" />
+    <ClInclude Include="Music.h" />
+    <ClInclude Include="ObjChain.h" />
+    <ClInclude Include="Objects.h" />
+    <ClInclude Include="ParticleSystem.h" />
+    <ClInclude Include="PlasmaCannon.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Radar.h" />
+    <ClInclude Include="ServerWnd.h" />
+    <ClInclude Include="Shadows.h" />
+    <ClInclude Include="Sounds.h" />
+    <ClInclude Include="Sprites.h" />
+    <ClInclude Include="Stall.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="text.h" />
+    <ClInclude Include="Transitions.h" />
+    <ClInclude Include="Tree.h" />
+    <ClInclude Include="ui.h" />
+    <ClInclude Include="Weapon.h" />
+    <ClInclude Include="wnd.h" />
+    <ClInclude Include="World.h" />
+    <ClInclude Include="Resources\Resources.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="1.bin">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="ICON1.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CT.RC" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

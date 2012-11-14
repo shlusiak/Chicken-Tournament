@@ -344,7 +344,7 @@ void CStall::FitWorld()
 		}
 
 		pos.y=h[0];
-		for (i=1;i<4;i++)if (h[i]<pos.y)pos.y=h[i];
+		for (int i=1;i<4;i++)if (h[i]<pos.y)pos.y=h[i];
 	}
 
 	eingang->SetPos(pos);

@@ -302,7 +302,7 @@ void CRadar::DrawUI(LPDIRECT3DDEVICE7 lpDevice)
 
 	const float x=game->width-20-w;
 	const float y=game->height-20-h;
-	const c=D3DRGBA(1,1,1,0.45f);
+	const int c=D3DRGBA(1,1,1,0.45f);
 	const float r=0.9f;
 	D3DTLVERTEX v[4]={
 		D3DTLVERTEX(D3DVECTOR(x,y,0),r,c,0,0,0),

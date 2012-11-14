@@ -19,7 +19,7 @@
 #include "animation.h"
 
 
-const chicken_maxeier=100;
+const int chicken_maxeier=100;
 
 
 enum SPLAT_TYPE

@@ -801,8 +801,8 @@ void CSlider::Draw(HDC dc)
 		HPEN pen=CreatePen(PS_SOLID,1,focused?RGB(255,255,255):canfocus?RGB(0,192,255):RGB(160,160,160)),oldpen=(HPEN)SelectObject(dc,pen);
 		HBRUSH brush=CreateSolidBrush(canfocus?focused?activated?RGB(0,255,192):RGB(0,192,255):RGB(0,128,192):RGB(192,192,192)),oldbrush=(HBRUSH)SelectObject(dc,brush);
 
-		const breite=h2-2;
-		const hoehe=h2-2;
+		const int breite=h2-2;
+		const int hoehe=h2-2;
 
 		int links=int(2+((w-2-breite)*(Position-iLeft))/(iRight-iLeft));
 
@@ -810,12 +810,12 @@ void CSlider::Draw(HDC dc)
 
 		if (activated)
 		{
-			const x1=links+1;
-			const x2=links+breite-4;
-			const xm=(x2-x1)/2+x1;
-			const y1=3+1;
-			const y2=hoehe-2-1;
-			const ym=(y2-y1)/2+y1;
+			const int x1=links+1;
+			const int x2=links+breite-4;
+			const int xm=(x2-x1)/2+x1;
+			const int y1=3+1;
+			const int y2=hoehe-2-1;
+			const int ym=(y2-y1)/2+y1;
 			HPEN pen=CreatePen(PS_SOLID,2,RGB(255,0,0)),oldpen=(HPEN)SelectObject(dc,pen);
 
 			Line(dc,xm-1,y1,x1,ym);
@@ -883,8 +883,8 @@ void CStaticText::Draw(HDC dc)
 
 
 
-const listitem_height=20;
-const listscrollbar_width=20;
+const int listitem_height=20;
+const int listscrollbar_width=20;
 
 CList::CList(const int vx,const int vy,const int vw,const int vh,CWnd* vowner,const int vcommand)
 :CWnd(NULL,vx,vy,vw,vh,vowner,vcommand),numstrings(0),strings(NULL),selected(-1),activated(FALSE),starty(0),scrolling(FALSE)

@@ -14,8 +14,8 @@
 
 
 
-const MAX_GRAS_PRO_VB=4000;
-const MAXIMUM_GRAS_OBJECTS=50000;
+const int MAX_GRAS_PRO_VB=4000;
+const int MAXIMUM_GRAS_OBJECTS=50000;
 
 
 
@@ -64,7 +64,7 @@ void CGras::InitGras(int menge)
 	DebugOut(&c[0]);
 #endif
 
-	for (i=0;i<vertexbuffers;i++)
+	for (int i=0;i<vertexbuffers;i++)
 	{
 		CreateGras(i,menge>MAX_GRAS_PRO_VB?MAX_GRAS_PRO_VB:menge);
 
@@ -131,7 +131,7 @@ void CGras::CreateGras(int index,int anzahl)
 		D3DVECTOR pos,width,n;
 		int y;
 		float faktor;
-		const maxloops=25;
+		const int maxloops=25;
 		WORD i;
 
 #ifdef GRAS_KI

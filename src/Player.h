@@ -15,7 +15,7 @@
 #include "radar.h"
 
 
-const bh=30; // Höhe des Burgersymbols
+const int bh=30; // Höhe des Burgersymbols
 
 
 

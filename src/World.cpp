@@ -100,7 +100,7 @@ void CWorld::CreateScene(int vrows,int vcols,float sizex,float sizey)
 
 	
 	// Markante Punkte der Landschaft erstellen
-	const punktabstand=5;
+	const int punktabstand=5;
 	{	
 		const float hoehe=8.5f;
 		const float wasser=1.7f;
@@ -137,8 +137,8 @@ void CWorld::CreateScene(int vrows,int vcols,float sizex,float sizey)
 		{
 			// Berechne Indices der angrenzenden 4 Vertexes mit markanten Punkten
 			const float faktx=float(i)/float(punktabstand),fakty=float(j)/float(punktabstand);
-			const x1=(int)floorf(faktx)*punktabstand;
-			const y1=(int)floorf(fakty)*punktabstand;
+			const int x1=(int)floorf(faktx)*punktabstand;
+			const int y1=(int)floorf(fakty)*punktabstand;
 			int x2=(int)ceilf(faktx)*punktabstand;
 			int y2=(int)ceilf(fakty)*punktabstand;
 

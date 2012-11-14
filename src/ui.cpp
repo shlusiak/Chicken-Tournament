@@ -110,7 +110,7 @@ void CTicker::Execute(float elapsed)
 
 void CTicker::Add(const PCHAR s,const DWORD color,const float vduration)
 {
-	const maxtickerlength=80;
+	const int maxtickerlength=80;
 search:
 #ifdef _DEBUG
 	CHAR c[500];
@@ -172,7 +172,7 @@ void CPlayerInfo::CPlayerInfoPlayer::Draw(HDC dc)
 		index++;
 	}
 
-	const t2=70;
+	const int t2=70;
 
 	SetTextColor(dc,RGB(0,0,0));
 	if (dpid==LocalPlayerID)SetTextColor(dc,RGB(255,255,255));
@@ -539,8 +539,8 @@ void CBillboardText::SetText(const PCHAR text,const COLORREF color)
 
 void CBillboardText::DrawUI(LPDIRECT3DDEVICE7 lpDevice)
 {
-	const maxx=game->width*3/5;
-	const maxy=game->height*3/5;
+	const int maxx=game->width*3/5;
+	const int maxy=game->height*3/5;
 
 	float faktor=sinf((time/maxtime)*g_PI);
 
