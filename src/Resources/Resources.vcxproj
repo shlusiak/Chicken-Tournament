@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Lite|Win32">
+      <Configuration>Release Lite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Sascha\Documents\GitHub\Chicken-Tournament\directxsdk\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Sascha\Documents\GitHub\Chicken-Tournament\directxsdk\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\Sascha\Documents\GitHub\Chicken-Tournament\directxsdk\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Sascha\Documents\GitHub\Chicken-Tournament\directxsdk\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">
+    <OutDir>.\Resources___Win32_Release_Lite\</OutDir>
+    <IntDir>.\Resources___Win32_Release_Lite\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;RESOURCES_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\Resources.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\Resources.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0407</Culture>
+      <PreprocessorDefinitions>_DEBUG;IMAGES;UTSOUNDS;ANNELI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\Resources.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>../Resources.dll</OutputFile>
+      <ImportLibrary>../Resources.lib</ImportLibrary>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;dsound.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>.\Resources.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;RESOURCES_EXPORTS;UTSOUNDS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\Resources.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\Resources.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0407</Culture>
+      <PreprocessorDefinitions>NDEBUG;UTSOUNDS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\Resources.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Console</SubSystem>
+      <ModuleDefinitionFile>.\Resources.def</ModuleDefinitionFile>
+      <OutputFile>../Resources.dll</OutputFile>
+      <ImportLibrary>../Resources.lib</ImportLibrary>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;dsound.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;RESOURCES_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Resources___Win32_Release_Lite\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Resources___Win32_Release_Lite\Resources.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Resources___Win32_Release_Lite\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Resources___Win32_Release_Lite\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Resources___Win32_Release_Lite\Resources.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0407</Culture>
+      <PreprocessorDefinitions>NDEBUG;IMAGES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Resources___Win32_Release_Lite\Resources.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Console</SubSystem>
+      <ModuleDefinitionFile>.\Resources.def</ModuleDefinitionFile>
+      <OutputFile>../Resources.dll</OutputFile>
+      <ImportLibrary>../Resources.lib</ImportLibrary>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;dsound.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Images.cpp" />
+    <ClCompile Include="MMIO.cpp" />
+    <ClCompile Include="Packages.cpp" />
+    <ClCompile Include="Resources.cpp" />
+    <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Wave.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Resources.def">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="bark.JPG">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="bodysplat.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="brathuhn.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="COOL.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="cur00001.cur" />
+    <CustomBuild Include="cursor1.bmp" />
+    <CustomBuild Include="cursor2.bmp" />
+    <CustomBuild Include="cursor3.bmp" />
+    <CustomBuild Include="cursor4.bmp" />
+    <CustomBuild Include="cursor5.bmp" />
+    <CustomBuild Include="denied.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="dominating.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="doublekill.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="eisplat.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="engine.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="fire.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="fire.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="flare0.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="flare1.JPG">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="flare2.JPG">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="flare3.JPG">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="fork.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="GLUCKE.WAV">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="glucke2.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="godlike.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="ground_small.JPG">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="HolyShit.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="ICON1.ICO" />
+    <CustomBuild Include="image1.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="image10.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="image11.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="image12.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="image13.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="image14.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="image15.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="image2.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="image3.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="image4.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="image5.JPG">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="image6.JPG">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="image7.JPG">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="image8.JPG">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="image9.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="item.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="jump.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="killingspree.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="LudicrousKill.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="medic.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="megakill.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="metal.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="models.x">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="monsterkill.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="multikill.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\Musik\Music.dat">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="plasma.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\sprites\plasma.spr">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Plasma.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="plasma2.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="rampage.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Sky0.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Sky1.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Sky2.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Sky3.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Sky4.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Sky5.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="spheremap.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="splash.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="splat.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="stall.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="step1.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="step2.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="step3.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="step4.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="stripes.jpg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="throw.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="ultrakill.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="unstoppable.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="wade.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="WhickedSick.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MMIO.h" />
+    <ClInclude Include="Resources.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="Wave.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
