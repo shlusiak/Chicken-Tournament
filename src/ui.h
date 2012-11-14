@@ -13,7 +13,7 @@
 
 
 
-const MAXTICKER=10;
+const int MAXTICKER=10;
 
 
 

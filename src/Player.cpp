@@ -144,13 +144,13 @@ void CPlayer::HasHit(const UID whom)
 
 		multikill->SetText(text,RGB(255,0,0));
 	}
-	const num=9;
+	const int num=9;
 	if ((Config.unrealext)&&((killswithoutdeath%num)==0)&&(killswithoutdeath<=(num)*6))
 	{	// "Killingspree", "godlike", ...
 		game->LoadUTSounds();
 
-		const nr=20-1+killswithoutdeath/num;
-		const tnr=killswithoutdeath/num-1;
+		const int nr=20-1+killswithoutdeath/num;
+		const int tnr=killswithoutdeath/num-1;
 		const PCHAR text=UnrealText2[tnr];
 
 		game->PlayAnnouncer(game->lpBuffers[nr]);

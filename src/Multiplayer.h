@@ -50,7 +50,8 @@ public:
 
 	void SendComplete()
 	{
-		for (int i=0;i<elements-1;i++)
+		int i;
+		for (i=0;i<elements-1;i++)
 			ids[i]=ids[i+1];
 		ids[i]=0;
 		if ((ids[0]==0)&&(shuttingdown))delete this;
@@ -60,22 +61,22 @@ public:
 };
 
 
-const NM_CHAT=1;
-const NM_WORLDMSG=2;
-const NM_COMPLETE=4;
-const NM_REQUESTPLAYER=5;
-const NM_OBJECTDATA=7;
-const NM_REQUESTOBJECTS=8;
-const NM_CREATEOBJECT=9;
-const NM_NOTIFY=10;
-const NM_REMOVE=11;
-const NM_PING=12;
-const NM_VARCHANGED=13;
-const NM_NAMECHANGED=14;
-const NM_TYPECHANGE=15;
+const int NM_CHAT=1;
+const int NM_WORLDMSG=2;
+const int NM_COMPLETE=4;
+const int NM_REQUESTPLAYER=5;
+const int NM_OBJECTDATA=7;
+const int NM_REQUESTOBJECTS=8;
+const int NM_CREATEOBJECT=9;
+const int NM_NOTIFY=10;
+const int NM_REMOVE=11;
+const int NM_PING=12;
+const int NM_VARCHANGED=13;
+const int NM_NAMECHANGED=14;
+const int NM_TYPECHANGE=15;
 
 
-const CHATCOLOR=D3DRGB(1,0,0.5f);
+const int CHATCOLOR=D3DRGB(1,0,0.5f);
 
 
 PNETWORKDATA PollNetwork();

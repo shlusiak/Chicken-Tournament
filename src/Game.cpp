@@ -57,13 +57,14 @@ CGame::CGame()
  replenishpower(2.0f),takepower(2.25f),damage(10.0f),plasmaregeneration(0.13f),plasmaradius(2.6f),
  plasmarate(1.9f),gravity(10.0f),PlasmaBallPressure(TRUE),respawntime(2.0f),harvesterspeed(1.0f),harvesterrotspeed(1.0f)
 {
+	int i;
 	game=this;
 	player=NULL;
 	LocalPlayerID=0;
 
 	MouseButton[0]=MouseButton[1]=FALSE;
 
-	for (int i=0;i<(sizeof(lpBuffers)/sizeof(lpBuffers[0]));i++)
+	for (i=0;i<(sizeof(lpBuffers)/sizeof(lpBuffers[0]));i++)
 		lpBuffers[i]=NULL;
 	for (i=0;i<(sizeof(lpTexture)/sizeof(lpTexture[0]));i++)
 		lpTexture[i]=NULL;
@@ -874,7 +875,7 @@ void CGame::DrawLoading(const int abschnitt,const int prozent)
 	GetTextExtentPoint(dc,"XYZ",3,&w);
 	for (int i=0;i<sizeof(T_LOADED)/sizeof(T_LOADED[0]);i++)
 	{
-		const y=int(height*0.3f)+i*(w.cy+3);
+		const int y=int(height*0.3f)+i*(w.cy+3);
 
 		SetTextColor(dc,RGB(0,0,0));
 		CHAR c[200];
@@ -948,8 +949,8 @@ DWORD WINAPI SaveThread(LPVOID param)
 	LPDIRECTDRAWSURFACE7 screenshot=(LPDIRECTDRAWSURFACE7)param;
 	HDC dc=0,memdc=0;
 	HBITMAP bitmap=0;
-	const width=game->width;
-	const height=game->height;
+	const int width=game->width;
+	const int height=game->height;
 
 	if (SUCCEEDED(screenshot->GetDC(&dc)))
 	{

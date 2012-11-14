@@ -70,55 +70,55 @@ void CServerPage::Create()
 #define AddServerChild(x) { CWnd* w=x; AddChild(w); if (!game->IsServer)w->canfocus=FALSE; }
 
 	int x=30;
-	const plus=35;
-	const minus=70;
-	const breite=200;
+	const int plus=35;
+	const int minus=70;
+	const int breite=200;
 	const PCHAR pPlus="+";
 	const PCHAR pMinus="-";
 	{	// Hühner
-		const y=70;
+		const int y=70;
 		AddChild(new CCountGroupBox(x,y,breite,55,M_CHICKEN,this,IDChicken));
 		AddServerChild(new CButton(x+breite-plus,y+20,25,25,this,pPlus,2));
 		AddServerChild(new CButton(x+breite-minus,y+20,25,25,this,pMinus,3));
 	}
 	{	// Bauern
-		const y=135;
+		const int y=135;
 		AddChild(new CCountGroupBox(x,y,breite,55,M_FARMER,this,IDBauer));
 		AddServerChild(new CButton(x+breite-plus,y+20,25,25,this,pPlus,16));
 		AddServerChild(new CButton(x+breite-minus,y+20,25,25,this,pMinus,17));
 	}
 	{	// Ställe
-		const y=200;
+		const int y=200;
 		AddChild(new CCountGroupBox(x,y,breite,55,M_STAELLE,this,IDStall));
 		AddServerChild(new CButton(x+breite-plus,y+20,25,25,this,pPlus,4));
 		AddServerChild(new CButton(x+breite-minus,y+20,25,25,this,pMinus,5));
 	}
 	{	// Bäume
-		const y=265;
+		const int y=265;
 		AddChild(new CCountGroupBox(x,y,breite,55,M_TREES,this,IDTree));
 		AddServerChild(new CButton(x+breite-plus,y+20,25,25,this,pPlus,6));
 		AddServerChild(new CButton(x+breite-minus,y+20,25,25,this,pMinus,7));
 	}
 	{	// Gartenkrallen
-		const y=330;
+		const int y=330;
 		AddChild(new CCountGroupBox(x,y,breite,55,M_GARTENKRALLEN,this,IDGartenkralle));
 		AddServerChild(new CButton(x+breite-plus,y+20,25,25,this,pPlus,8));
 		AddServerChild(new CButton(x+breite-minus,y+20,25,25,this,pMinus,9));
 	}
 	{	// Golfschläger
-		const y=395;
+		const int y=395;
 		AddChild(new CCountGroupBox(x,y,breite,55,M_GOLFSCHLAEGER,this,IDGolfer));
 		AddServerChild(new CButton(x+breite-plus,y+20,25,25,this,pPlus,10));
 		AddServerChild(new CButton(x+breite-minus,y+20,25,25,this,pMinus,11));
 	}
 	{	// Mähdrescher
-		const y=460;
+		const int y=460;
 		AddChild(new CCountGroupBox(x,y,breite,55,M_DRESCHER,this,IDDrescher));
 		AddServerChild(new CButton(x+breite-plus,y+20,25,25,this,pPlus,12));
 		AddServerChild(new CButton(x+breite-minus,y+20,25,25,this,pMinus,13));
 	}
 	{	// Plasmakanonen
-		const y=525;
+		const int y=525;
 		AddChild(new CCountGroupBox(x,y,breite,55,M_PLASMACANNONS,this,IDPlasmaCannon));
 		AddServerChild(new CButton(x+breite-plus,y+20,25,25,this,pPlus,14));
 		AddServerChild(new CButton(x+breite-minus,y+20,25,25,this,pMinus,15));

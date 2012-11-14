@@ -14,7 +14,7 @@
 //const console_width=512;
 //const console_textheight=20;
 //const maxlines=console_width/(console_textheight)-1;
-const maxlines=20;
+const int maxlines=20;
 
 
 class CConsole:public CObject

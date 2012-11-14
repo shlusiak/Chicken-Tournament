@@ -213,7 +213,7 @@ const BOOLEAN CGame::InitZBuffer(const GUID DeviceGUID)
 
 	BOOLEAN found=FALSE;
 
-	const STENCIL=SHADOWS;	// Set this to true to enable Shadows!
+	const int STENCIL=SHADOWS;	// Set this to true to enable Shadows!
 
 	if ((!found)&&(STENCIL))found=EnumZBuffer(lpD3D,DeviceGUID,&lpDDSZBuf,&m_ddpfZBuffer,TRUE,back.ddpfPixelFormat.dwRGBBitCount);
 	if (!found)found=EnumZBuffer(lpD3D,DeviceGUID,&lpDDSZBuf,&m_ddpfZBuffer,FALSE,back.ddpfPixelFormat.dwRGBBitCount);
@@ -634,7 +634,7 @@ const BOOLEAN CGame::LoadTextures(const BOOLEAN restoring)
 	SaveDelete(lpD3DFont);
 
 
-	const mipmaps=5;
+	const int mipmaps=5;
 #define Load(nr,name,mips) lpTexture[nr]=CreateTextureFromResource(lpDevice,lpDD,lpTexture[nr],name,mips,TRUE,FALSE,FALSE); if (lpTexture[nr]==NULL){ DebugOut(name); return FALSE;} 
 #define LoadCompressed(nr,name,mips) pTexture[nr]=CreateTextureFromResource(lpDevice,lpDD,lpTexture[nr],name,mips,TRUE,FALSE,TRUE); if (lpTexture[nr]==NULL) { DebugOut(name); return FALSE;}
 #define LoadAlpha(nr,name,mips) lpTexture[nr]=CreateTextureFromResource(lpDevice,lpDD,lpTexture[nr],name,mips,FALSE,TRUE,FALSE); if (lpTexture[nr]==NULL) { DebugOut(name); return FALSE;}

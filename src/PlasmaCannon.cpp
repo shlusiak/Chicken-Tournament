@@ -197,7 +197,7 @@ void CPlasmaBall::Draw(LPDIRECT3DDEVICE7 lpDevice)
 
 
 
-const plasmaballimagesize=45;
+const int plasmaballimagesize=45;
 
 BOOLEAN CPlasmaCannon::Init()
 {

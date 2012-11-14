@@ -24,10 +24,10 @@
 
 
 
-const maxconsolechars=200;
+const int maxconsolechars=200;
 
-const yellow=RGB(255,255,0);
-const green=RGB(0,255,0);
+const int yellow=RGB(255,255,0);
+const int green=RGB(0,255,0);
 
 
 
@@ -359,7 +359,7 @@ void CConsole::Exec()
 	Add(akt);
 	PCHAR p1,p2,p3,p4;
 
-	const max=Parse(akt,&p1,&p2,&p3,&p4);
+	const int max=Parse(akt,&p1,&p2,&p3,&p4);
 	_strupr(akt);	// Befehl in Grossbuchstaben wandeln
 
 	if (strcmp(akt,"FOG")==0)

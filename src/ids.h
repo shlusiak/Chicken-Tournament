@@ -9,20 +9,20 @@
 typedef DWORD UID;
 
 
-const IDUnknown=0;
-const IDSound=1;
-const IDEffect=2;
-const IDGartenkralle=3;
-const IDChicken=4;
-const IDBauer=5;
-const IDDrescher=6;
-const IDGolfer=7;
-const IDWorld=8;
-const IDTree=9;
-const IDEi=10;
-const IDStall=11;
-const IDPlasmaCannon=12;
-const IDItem=13;
+const int IDUnknown=0;
+const int IDSound=1;
+const int IDEffect=2;
+const int IDGartenkralle=3;
+const int IDChicken=4;
+const int IDBauer=5;
+const int IDDrescher=6;
+const int IDGolfer=7;
+const int IDWorld=8;
+const int IDTree=9;
+const int IDEi=10;
+const int IDStall=11;
+const int IDPlasmaCannon=12;
+const int IDItem=13;
 
 
 

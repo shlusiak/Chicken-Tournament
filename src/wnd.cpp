@@ -58,8 +58,8 @@ public:
 
 
 #define mitte (w/2)
-const breite=160;
-const hoehe=40;
+const int breite=160;
+const int hoehe=40;
 #define links (mitte-(breite/2))
 #define ypos(x) (150+(x)*(hoehe+10))
 
@@ -196,11 +196,11 @@ COptionen::COptionen()
 :CPage(game->lpDD,M_OPTIONS,game->width,game->height,game->wnd)
 { }
 
-const reihe=240;
+const int reihe=240;
 
 void COptionen::Create()
 {
-	const spalte=25;
+	const int spalte=25;
 	CWnd* obj=NULL;
 
 	DWORD rs;
@@ -570,7 +570,7 @@ void CInfoControl::Draw(HDC dc)
 		M_EMAILS,TRUE,1,0
 	};
 
-	const MAX_TEXT=sizeof(text)/sizeof(text[0]);
+	const int MAX_TEXT=sizeof(text)/sizeof(text[0]);
 
 	const HFONT font1=CreateFont(th,tw,0,0,FW_BLACK,FALSE,FALSE,FALSE,ANSI_CHARSET,OUT_DEFAULT_PRECIS,CLIP_DEFAULT_PRECIS,NONANTIALIASED_QUALITY,FF_DONTCARE,"ARIAL");
 	const HFONT font2=CreateFont(th,tw,0,0,FW_ULTRALIGHT,TRUE,FALSE,FALSE,ANSI_CHARSET,OUT_DEFAULT_PRECIS,CLIP_DEFAULT_PRECIS,NONANTIALIASED_QUALITY,FF_DONTCARE,"ARIAL");
@@ -606,7 +606,7 @@ void CInfoControl::Draw(HDC dc)
 	r.left=20;
 	r.right=w-20;
 
-	for (i=0;i<MAX_TEXT;i++)
+	for (int i=0;i<MAX_TEXT;i++)
 	{
 		r.top=y;
 		r.bottom=r.top+th;
@@ -672,7 +672,7 @@ CInfo::CInfo()
 
 void CInfo::Create()
 {
-	const breite=325;
+	const int breite=325;
 	AddChild(new CButton(links,h-hoehe-20,breite,hoehe,this,M_BACK,1));
 	AddChild(new CButton(mitte-250/2,h-3*hoehe-10,250,30,this,"email: mail@saschahlusiak.de",2));
 	AddChild(new CButton(mitte-250/2,h-2*hoehe-17,250,30,this,"www.saschahlusiak.de",3));

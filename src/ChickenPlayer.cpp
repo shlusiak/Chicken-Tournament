@@ -503,7 +503,7 @@ void CChickenPlayer::DrawUI(LPDIRECT3DDEVICE7 lpDevice)
 		const float s2=180.0f*faktor;
 		float alpha;
 
-		const x1=int(120.0f*faktor);
+		const int x1=int(120.0f*faktor);
 
 		MakeBillboardVertices(v,x1,int(game->height-10-s1),int(s1),int(s1),D3DRGB(1,1,1));
 
@@ -516,8 +516,8 @@ void CChickenPlayer::DrawUI(LPDIRECT3DDEVICE7 lpDevice)
 		DrawZeiger(lpDevice,x1+s1*0.5f,game->height-10-s1*0.5f,s1*0.33f,alpha);
 
 		// Schubmesser
-		const x2=int(10.0f*faktor);
-		const y2=int(game->height-s1-s2+35.0f*faktor);
+		const int x2=int(10.0f*faktor);
+		const int y2=int(game->height-s1-s2+35.0f*faktor);
 		MakeBillboardVertices(v,x2,y2,int(s2),int(s2),D3DRGB(1,1,1));
 		lpDevice->SetTexture(0,game->lpTexture[43]);
 		lpDevice->DrawPrimitive(D3DPT_TRIANGLESTRIP,D3DFVF_TLVERTEX,v,4,0);

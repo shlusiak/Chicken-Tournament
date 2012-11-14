@@ -12,7 +12,7 @@
 #include "config.h"
 
 
-const vertexpacken=10;	// 10 Partikel -> 10*6 Vertices = 60 V
+const int vertexpacken=10;	// 10 Partikel -> 10*6 Vertices = 60 V
 
 
 CParticleSystem::CParticleSystem(const D3DVECTOR vcenter)
@@ -76,7 +76,7 @@ void CParticleSystem::Draw(LPDIRECT3DDEVICE7 lpDevice)
 
 		for (int j=0;j<max;j++)
 		{
-			const pnum=i*vertexpacken+j;
+			const int pnum=i*vertexpacken+j;
 			const float asdf=Particel[pnum].size*0.5f;
 			rightVect=rv*asdf;
 			upVect=uv*asdf;

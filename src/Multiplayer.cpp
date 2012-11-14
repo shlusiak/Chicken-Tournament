@@ -490,7 +490,7 @@ const DWORD Send(const DPID to,const DWORD msg,const DWORD id,const DWORD p1,con
 	if (game->lpDirectPlay==NULL)return 0;
 	if (!otherplayers)return 0;
 
-	const timeout=0;
+	const int timeout=0;
 	const int s=sizeof(DWORD)*5+datasize;
 	PDWORD v=(PDWORD)malloc(s);
 	v[0]=msg;
@@ -665,8 +665,8 @@ const DWORD CMessageChain::Send(const DPID to,const DWORD msg,const DWORD id,con
 		if (lastsend<0.11)return 0;
 		lastsend=0.0f;
 	}
-
-	for (int nr=0;nr<elements;nr++)
+	int nr;
+	for (nr=0;nr<elements;nr++)
 	{
 		if (ids[nr]==0) break;
 	}
